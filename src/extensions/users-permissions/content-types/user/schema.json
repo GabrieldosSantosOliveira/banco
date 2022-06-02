@@ -104,6 +104,15 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "wait": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::wait.wait",
+      "inversedBy": "users"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

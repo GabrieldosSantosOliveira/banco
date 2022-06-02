@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "project"
+    "displayName": "project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,18 +24,24 @@
       "type": "richtext",
       "required": true
     },
-    "image": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": true
-    },
     "request": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::request.request",
       "inversedBy": "projects"
+    },
+    "wait": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::wait.wait",
+      "inversedBy": "projects"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
